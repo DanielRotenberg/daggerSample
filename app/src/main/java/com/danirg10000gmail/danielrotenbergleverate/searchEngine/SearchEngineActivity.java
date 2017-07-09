@@ -22,7 +22,7 @@ public class SearchEngineActivity extends AppCompatActivity implements SearchEng
     setContentView(R.layout.activity_search_engine);
     DaggerSearchEngineComponent.builder()
         .searchEngineNetworkComponent(((App) getApplication()).getDaggerSearchEngineComponent())
-        //.searchEngineModule(new SearchEngineModule(this))
+        .searchEngineModule(new SearchEngineModule(this))
         .build()
         .inject(this);
 

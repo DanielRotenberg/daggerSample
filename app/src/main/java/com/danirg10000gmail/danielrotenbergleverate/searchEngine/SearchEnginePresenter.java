@@ -10,8 +10,8 @@ public class SearchEnginePresenter implements SearchEngineContract.Presenter {
   private SearchRepository mRepository;
 
   @Inject
-  public SearchEnginePresenter( SearchRepository repository) {
-
+  public SearchEnginePresenter(SearchEngineContract.View view, SearchRepository repository) {
+    mView = view;
     mRepository = repository;
   }
 
